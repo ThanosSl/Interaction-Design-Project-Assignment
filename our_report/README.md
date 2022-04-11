@@ -12,7 +12,7 @@
 # 1st Deliverable
 - Design Brief (Short description of the project: main goals) (1/2 page max)
     
-    Short: Υποστήριξη πεζών κατά την διάρκεια διάσχισης του δρόμου. 
+    Short: Υποστήριξη πεζών κατά την διάρκεια διάσχισης του δρόμου. Πιο συγκεκριμένα ο πεζός θα ειδοποιείται με πορτοκαλί ένδειξη για το αν πλησιάζει αυτοκίνητο με μεγάλη ταχύτητα. Το σύστημα θα βασίζεται σε αυτή την ταχύτητα, ώστε να ενημερώνει ανάλογα τον πεζό. 
     
 - Research (Based on PACT) (2 pages max):
     - Analyse People (users and other stakeholders, define target group - Which are your users)
