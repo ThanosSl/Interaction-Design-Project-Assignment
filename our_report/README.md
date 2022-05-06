@@ -53,13 +53,13 @@
 
 - Interface design (Outline interface components - Define each component's role, behaviour, relation to other) (1 page max)
   
-  -Επιγραμματικά τα interface components:
+  - Επιγραμματικά τα interface components:
 
     1. LED 
       a. να υπάρχει πηγή φωτός
       b. να φωτίζει το φακό
     
-    2.LED CAP  (ΦΑΚΟΣ, σε σχήμα χεριού)
+    2. LED CAP  (ΦΑΚΟΣ, σε σχήμα χεριού)
       a. για να ενημερώνει τον χρήστη για να σταματήσει
     
     3. Ετικέτα STOP
