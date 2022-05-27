@@ -96,7 +96,7 @@
 
 - **Prototyping** (Create a prototype based on a single scenario)(2 pages max)
  
- ![This is an image]()
+ ![This is an image](https://github.com/ThanosSl/Interaction-Design-Project-Assignment/blob/main/arduino_storyborad1.png)
 
 # Conclusions
 
