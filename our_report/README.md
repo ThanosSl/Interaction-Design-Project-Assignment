@@ -45,13 +45,13 @@
      - LED activation (based on speed)
      - RESET
  
-- User Interaction (Plan and analyse new interaction behaviour based on the activities described on step 2.2) (1 page max)
+- **User Interaction** (Plan and analyse new interaction behaviour based on the activities described on step 2.2) (1 page max)
      
      - 1η περίπτωση: Βλέπει το κόκκινο LED με το χεράκι πάνω του, υπάρχει και ένα STOP όπου τον ενημερώνει για το τι πρέπει να κάνει. Σταματάει και περιμένει να κλείσει το φωτάκι. Το φωτάκι θα έχει κλείσει αφού υπολογιστεί σε πόσο χρόνο στα 50m περίπου θα περάσει το όχημα.
 
      - 2η περίπτωση: Είναι κλειστό το LED οπότε δεν χρειάζεται να κάθεται να περιμένει. Απλά περνάει τον δρόμο.
 
-- Interface design (Outline interface components - Define each component's role, behaviour, relation to other) (1 page max)
+- **Interface design** (Outline interface components - Define each component's role, behaviour, relation to other) (1 page max)
   
    - Επιγραμματικά τα interface components:
 
@@ -77,7 +77,7 @@
 
 
 # 3rd Deliverable 
-- Scenarios & Storyboarding (Prepare short scenarios focused on specific activities, create storyboards that present activities in action)(1-page max)
+- **Scenarios & Storyboarding** (Prepare short scenarios focused on specific activities, create storyboards that present activities in action)(1-page max)
  
   - 1η ΠΕΡΙΠΤΩΣΗ: (αναγνωρίζει κίνηση):
    
@@ -94,7 +94,7 @@
     
     - Παραμένει κλειστό το φωτάκι, και δεν κάνει τίποτα.
 
-- Prototyping (Create a prototype based on a single scenario)(2 pages max)
+- **Prototyping** (Create a prototype based on a single scenario)(2 pages max)
  
  ![This is an image]()
 
