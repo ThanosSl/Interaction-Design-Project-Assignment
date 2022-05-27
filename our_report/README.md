@@ -12,7 +12,7 @@
 # 1st Deliverable
 - Design Brief (Short description of the project: main goals) (1/2 page max)
     
-    Short: Υποστήριξη πεζών κατά την διάρκεια διάσχισης του δρόμου. Πιο συγκεκριμένα ο πεζός θα ειδοποιείται με πορτοκαλί ένδειξη για το αν πλησιάζει αυτοκίνητο με μεγάλη ταχύτητα. Το σύστημα θα βασίζεται σε αυτή την ταχύτητα, ώστε να ενημερώνει ανάλογα τον πεζό. 
+    Short: Ένα φανάρι με σχήμα κυλίνδρου στο ύψος ενός μέτρου, που θα ανιχνεύει την ταχύτητα των μηχανοκίνητων οχημάτων και θα προειδοποιεί τον χρήστη με ένα πορτοκάλι φως για το αν μπορεί να περάσει την διάβαση ή όχι.
     
 - Research (Based on PACT) (2 pages max):
     - Analyse People (users and other stakeholders, define target group - Which are your users)
@@ -77,7 +77,26 @@
 
 
 # 3rd Deliverable 
+- Scenarios & Storyboarding (Prepare short scenarios focused on specific activities, create storyboards that present activities in action)(1-page max)
+ 
+  - 1η ΠΕΡΙΠΤΩΣΗ: (αναγνωρίζει κίνηση):
+   
+   - 1η φάση: Ο σένσορας αναγνωρίζει κίνηση μηχανοκίνητου.
+  
+   - 2η φάση: Αφού το αναγνωρίζει ο σένσορας το στέλνει στο arduino UNO.
+  
+   - 3η φάση: Το πρόγραμμα κάνει την φωτεινή ένδειξη πορτοκαλί.
+   
+   - 4η φάση: Ο πεζός πριν περάσει την διασταύρωση παρατηρεί το πορτοκαλί φως και σταματάει.
+  
+  
+  - 2η ΠΕΡΙΠΤΩΣΗ: (δεν αναγνωρίζει κίνηση | default):
+    
+   - Παραμένει κλειστό το φωτάκι, και δεν κάνει τίποτα.
 
+- Prototyping (Create a prototype based on a single scenario)(2 pages max)
+ 
+ ![This is an image]()
 
 # Conclusions
 
