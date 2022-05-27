@@ -10,11 +10,11 @@
 
 
 # 1st Deliverable
-- Design Brief (Short description of the project: main goals) (1/2 page max)
+- **Design Brief** (Short description of the project: main goals) (1/2 page max)
     
     Short: Ένα φανάρι με σχήμα κυλίνδρου στο ύψος ενός μέτρου, που θα ανιχνεύει την ταχύτητα των μηχανοκίνητων οχημάτων και θα προειδοποιεί τον χρήστη με ένα πορτοκάλι φως για το αν μπορεί να περάσει την διάβαση ή όχι.
     
-- Research (Based on PACT) (2 pages max):
+- **Research** (Based on PACT) (2 pages max):
     - Analyse People (users and other stakeholders, define target group - Which are your users)
         
         Pedestrians.
@@ -32,7 +32,7 @@
         Police Camera for detecting the speed of a car, pharmacy centers/ supermarkets sensors detecting movement (Αισθητήρες κίνησης/ Movement sensors)
 
 # 2nd Deliverable
-- Information architecture (outline the major information components/content and their organisation) (2 pages max)
+- **Information architecture** (outline the major information components/content and their organisation) (2 pages max)
   
      Η διαδικασία που ακολουθείται είναι η εξής. Αρχικά, διασχίζει ένα μηχανοκίνητο όχημα τον δρόμο, το οποίο το εντοπίζει ο πρώτος αισθητήρας, όταν το όχημα μετακινηθεί 1 μέτρο θα το εντοπίσει ο δεύτερος αισθητήρας. Αυτές τις πληροφορίες, οι σένσορες θα τις στέλνουν στο arduino όπου και θα γίνεται ο υπολογισμός της ταχύτητας του οχήματος. (Αν πάνω από 65km/h ανοίγει το φωτάκι, αν κάτω από 65km/h δεν ανοίγει το φωτάκι). Θα ανοίγει ή θα παραμένει κλειστό, ανάλογα την περίπτωση. Με το που θα παίρνει σήμα ο 2ος σένσορας και στείλει την πληροφορία στο Arduino, και οι δύο σένσορες κάνουν reset.
   
