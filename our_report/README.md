@@ -103,97 +103,12 @@
 - **Prototyping** (Create a prototype based on a single scenario)(2 pages max)
   
      - Το αυτοκινητάκι περνάει πάνω από τον 1ο αισθητήρα: <br!>
-
-   Ενεργοποιεί την συνάρτηση autoTune, η οποία ξεκινάει το ρολόι. Κατ’ ουσία  η συνάρτηση millis() κρατάει τον χρόνο, όπου εξαρτάται από την Serial.begin, και έπειτα     εισάγεται στην μεταβλητή t1. <br!>
-
-   Έπειτα, καλείται μία δεύτερη συνάρτηση autotune η οποία είναι υπέυθυνη για τον δεύτερο αισθητήρα. Όταν η συνάρτηση λάβει ερέθισμα από τον αισθητήρα, υπολογίζεται ο     δεύτερος χρόνος που χρειαζόμαστε και εισάγεται στην μεταβλητή t2. Με τον υπολογιμσό των t1 και t2 μπορούμε να βρούμε σε πόσο χρόνο το αυτοκίνητο κάλυψε την         απόσταση των 20 μετρων μεταξύ των αισθητήρων. <br!>
-
-  Έτσι, λοιπόν, μπορούμε να βρούμε τη ταχύτητα του αυτοκινήτου (αν η αφαίρεση των δυο τιμών μας δίνει αποτέλεσμα ίσο ή μικρότερο από 1108 χιλιοστά του δευτερολέπτου   τότε το αυτοκίνητα κινείται με ταχύτητα ίση ή μεγαλύτερη από 65 km/h ). Στην περίπτωση που έχουμε υπέρβαση του προειδοποιητικού ορίου των 65 km/h , το φωτάκι θα ανάψει.<br!>
-
+       Ενεργοποιεί την συνάρτηση autoTune, η οποία ξεκινάει το ρολόι. Κατ’ ουσία  η συνάρτηση millis() κρατάει τον χρόνο, όπου εξαρτάται από την Serial.begin, και έπειτα     εισάγεται στην μεταβλητή t1. <br!>
+Έπειτα, καλείται μία δεύτερη συνάρτηση autotune η οποία είναι υπέυθυνη για τον δεύτερο αισθητήρα. Όταν η συνάρτηση λάβει ερέθισμα από τον αισθητήρα, υπολογίζεται ο     δεύτερος χρόνος που χρειαζόμαστε και εισάγεται στην μεταβλητή t2. Με τον υπολογιμσό των t1 και t2 μπορούμε να βρούμε σε πόσο χρόνο το αυτοκίνητο κάλυψε την         απόσταση των 20 μετρων μεταξύ των αισθητήρων. <br!>
+Έτσι, λοιπόν, μπορούμε να βρούμε τη ταχύτητα του αυτοκινήτου (αν η αφαίρεση των δυο τιμών μας δίνει αποτέλεσμα ίσο ή μικρότερο από 1108 χιλιοστά του δευτερολέπτου   τότε το αυτοκίνητα κινείται με ταχύτητα ίση ή μεγαλύτερη από 65 km/h ). Στην περίπτωση που έχουμε υπέρβαση του προειδοποιητικού ορίου των 65 km/h , το φωτάκι θα ανάψει.<br!>
 Να σημειωθεί ότι για λόγους ευκολίας, το φωτάκι (της μακέτας) καταλήξαμε να το κάνουμε κόκκινο.
 
-   - **Κώδικας**
- 
- //We create the pins we're using
-const int sensorPin1 =0;
-const int sensorPin2 =1;
-const int ledPin = 9;
-const int t1 = 0;
-const int t2 = 0;
-const int distance =0;
-
-// Set up some global variables for the light level:
-int lightLevel, high = 0, low = 1023;
-void setup()
-{
-  // We'll set up the LED pin to be an output.  
-  pinMode(ledPin, OUTPUT);
-}
-
-void loop()
-{
-  // We use the analogRead() function to measure 
-  // the voltage coming from the photoresistor pair. 
-  sensorPin1;
-  sensorPin2;
-  lightLevel = analogRead(sensorPin1);
-  lightLevel = analogRead(sensorPin2);
-  
-  // Arduino doing the work for us!
-  autoTune(); 
-  autoTune2();
-
-  //We need it so we can adjust the britness of the LED 
-  analogWrite(ledPin, lightLevel); 
-}
-
-void autoTune()
-{
-  // In this function, the Arduino will keep track of the highest
-  // and lowest values that we're reading from analogRead().
-  
-  if (lightLevel < low)
-  {
-    low = lightLevel;
-    Serial.begin(9600);
-    long int t1 = millis();
-    Serial.print("Milliseconds");
-    
-    //If the tim is smaller or same than 1108 mili-seconds
-    //then LED goes ON
-    //if else bigger than 1108 mili-seconds, then it does nothing
-    if (t2-t1 <= 1108 )
-    {
-      digitalWrite(ledPin, HIGH);
-    }
-      else (t2-t1 >1108);
-   }
-  
-  if (lightLevel > high){}
-  
-  
-  // Once we have the highest and lowest values, we can stick them
-  // directly into the map() function. No manual tweaking needed!
-}
-  
-  void autoTune2() //Here is the AutoTune for the second Photoresistor
-{
-  
-  if (lightLevel < low)
-  {
-    low = lightLevel;
-    Serial.begin(9600);
-    long int t2 = millis();
-  }
-    
-    if (lightLevel > high)
-  {
-    high = lightLevel;
-  }
-  
-  lightLevel = map(lightLevel, low+30, high-30, 0, 255);
-  lightLevel = constrain(lightLevel, 0, 255); 
- }
+   
  
 # Conclusions
 
