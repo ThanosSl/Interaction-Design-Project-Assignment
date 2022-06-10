@@ -1,0 +1,80 @@
+//We create the pins we're using
+const int sensorPin1 =0;
+const int sensorPin2 =1;
+const int ledPin = 9;
+const int t1 = 0;
+const int t2 = 0;
+const int distance =0;
+
+// Set up some global variables for the light level:
+int lightLevel, high = 0, low = 1023;
+void setup()
+{
+// We'll set up the LED pin to be an output.  
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+  // We use the analogRead() function to measure 
+  // the voltage coming from the photoresistor pair. 
+  sensorPin1;
+  sensorPin2;
+  lightLevel = analogRead(sensorPin1);
+  lightLevel = analogRead(sensorPin2);
+  
+  // Arduino doing the work for us!
+  autoTune(); 
+  autoTune2();
+
+  //We need it so we can adjust the britness of the LED 
+  analogWrite(ledPin, lightLevel); 
+}
+
+void autoTune()
+{
+  // In this function, the Arduino will keep track of the highest
+  // and lowest values that we're reading from analogRead().
+  
+  if (lightLevel < low)
+  {
+    low = lightLevel;
+    Serial.begin(9600);
+    long int t1 = millis();
+    Serial.print("Milliseconds");
+    
+    //If the tim is smaller or same than 1108 mili-seconds
+    //then LED goes ON
+    //if else bigger than 1108 mili-seconds, then it does nothing
+    if (t2-t1 <= 1108 )
+    {
+      digitalWrite(ledPin, HIGH);
+    }
+      else (t2-t1 >1108);
+   }
+  
+  if (lightLevel > high){}
+  
+  
+  // Once we have the highest and lowest values, we can stick them
+  // directly into the map() function. No manual tweaking needed!
+}
+  
+  void autoTune2() //Here is the AutoTune for the second Photoresistor
+{
+  
+  if (lightLevel < low)
+  {
+    low = lightLevel;
+    Serial.begin(9600);
+    long int t2 = millis();
+  }
+    
+    if (lightLevel > high)
+  {
+    high = lightLevel;
+  }
+  
+  lightLevel = map(lightLevel, low+30, high-30, 0, 255);
+  lightLevel = constrain(lightLevel, 0, 255); 
+ }
