@@ -111,6 +111,6 @@
    
  
 # Conclusions
-
+- Link του tinkercad κώδικα, για βελτιώσεις: https://www.tinkercad.com/things/j6AVxtwYh6y-spectacular-inari-densor/editel?sharecode=qjmvsew3OiN30whn1lfmh9ywlG3E3-7lLyW4onKm0X4
 
 # Sources
